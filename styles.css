@@ -238,7 +238,15 @@ header.scrolled .logo, header.scrolled .nav-menu a, header.scrolled .social-icon
 .card:hover { transform: translateY(-10px); }
 
 /* EQUIPO */
-.team-card img { width: 100%; height: 350px; object-fit: cover; }
+.team-card img { 
+    width: 100%; 
+    min-width: 100%; /* Forces the image to stretch to the exact edges */
+    height: 350px; 
+    object-fit: cover; 
+    object-position: center top; /* Keeps the focus on their faces instead of the center of the image */
+    display: block; 
+    margin: 0;
+}
 .team-info { padding: 25px; text-align: center; }
 .team-info h3 { font-size: 1.2rem; }
 .team-info .role { color: var(--gold); font-size: 0.9rem; font-weight: 600; margin-bottom: 15px; text-transform: uppercase;}
